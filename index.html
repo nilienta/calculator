@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./style.css" rel="stylesheet">
+	<title>Калькулятор</title>
+</head>
+
+<body>
+	<!-- Первый вариант - более простой
+	<div class="container">
+		<input id="num">
+		<p id="numqwe"></p>
+		<div class="btn" id="button" onclick="save()">
+			<button id="plus" onclick="op='+'">+</button>
+			<button id="minus" onclick="op='-'">-</button>
+			<button id="times" onclick="op='*'">*</button>
+			<button id="divide" onclick="op='/'">/</button>
+		</div>
+		<button onclick="getRes()">Посчитать</button>
+		<p class="box-res" id="res">Результат</p>
+	</div> -->
+	<div class="wrap">
+		<div class="calc">
+			<div class="calc__field">
+				<div class="calc__history" id="line1"></div>
+				<div class="calc__history" id="line2"></div>
+				<textarea id="display" class="calc__display" autofocus></textarea>
+			</div>
+			<div class="buttons">
+				<div class="calc__row">
+					<button class="calc__item calc__item--del" onclick="cleaner()">С</button>
+					<button class="calc__item calc__item--symbol" onclick="addNum('&#40')">(</button>
+					<button class="calc__item calc__item--symbol" onclick="addNum('&#41')">)</button>
+					<button class="calc__item calc__item--operator" onclick="addNum('*')">×</button>
+				</div>
+				<div class="calc__row">
+					<button class=" calc__item calc__item--symbol" onclick="sqrt()">√</button>
+					<button class="calc__item calc__item--symbol">%</button>
+					<button class="calc__item calc__item--symbol" onclick="sign ()">±</button>
+					<button class="calc__item calc__item--operator" onclick="addNum('/')">÷</button>
+				</div>
+				<div class="calc__row">
+					<button class=" calc__item calc__item--number" onclick="addNum(7)">7</button>
+					<button class="calc__item calc__item--number" onclick="addNum(8)">8</button>
+					<button class="calc__item calc__item--number" onclick="addNum(9)">9</button>
+					<button class="calc__item calc__item--operator" onclick="addNum('-')">-</button>
+				</div>
+				<div class="calc__row">
+					<button class=" calc__item calc__item--number" onclick="addNum(4)">4</button>
+					<button class="calc__item calc__item--number" onclick="addNum(5)">5</button>
+					<button class="calc__item calc__item--number" onclick="addNum(6)">6</button>
+					<button class="calc__item calc__item--operator" onclick="addNum('+')">+</button>
+				</div>
+				<div class="calc__row">
+					<div class=" row--double">
+						<button class="calc__item calc__item--number" onclick="addNum(1)">1</button>
+						<button class="calc__item calc__item--number" onclick="addNum(2)">2</button>
+						<button class="calc__item calc__item--number" onclick="addNum(3)">3</button>
+						<button class="calc__item calc__item--number calc__item--null" onclick="addNum(0)">0</button>
+						<button class="calc__item calc__item--number" onclick="addNum('.')">.</button>
+					</div>
+					<button class="calc__item calc__item--operator calc__item--equally" onclick="solve()">=</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./index.js"></script>
+</body>
+
+</html>
